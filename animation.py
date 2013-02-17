@@ -5,14 +5,13 @@ from Tkinter import *
 ###########################################
 
 class Animation(object):
-    # Override these methods when creating your own animation
+    # Override these methods when creating an animation
     def mousePressed(self, event): pass
     def keyPressed(self, event): pass
     def timerFired(self): pass
     def init(self): pass
     def redrawAll(self): pass
     
-    # Call app.run(width,height) to get your app started
     def run(self, width=1000, height=600):
 		# create the root and the canvas
 		root = Tk()
@@ -34,7 +33,7 @@ class Animation(object):
 		root.bind("<Button-1>", mousePressedWrapper)
 		root.bind("<Key>", keyPressedWrapper)
 		# set up timerFired events
-		self.timerFiredDelay = 50 # milliseconds
+		self.timerFiredDelay = 50 
 		def timerFiredWrapper():
 			self.timerFired()
 			redrawAllWrapper()
