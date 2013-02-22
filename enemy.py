@@ -5,7 +5,7 @@
 class EnemyWave(object):
 	def __init__(self, numEnemies, rows, cols, cellDim, startLocation, board):
 		self.wave = []
-	
+  	
 
 ###########################################
 # Enemy class
